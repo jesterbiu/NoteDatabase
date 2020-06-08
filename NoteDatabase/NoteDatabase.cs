@@ -238,7 +238,7 @@ namespace SQLiteDemo
         /// </summary>
         /// <param name="kbase"></param>
         /// <returns></returns>
-        public bool addKB(KnowledgeBase kbase)
+        public bool AddKnowledgeBase(KnowledgeBase kbase)
         {
             // Validate input
             if (kbase == null)
@@ -269,7 +269,7 @@ namespace SQLiteDemo
         /// </summary>
         /// <param name="kbase"></param>
         /// <returns></returns>
-        public bool addNote(Note note)
+        public bool AddNote(Note note)
         {
             // Validate input
             if (note == null)

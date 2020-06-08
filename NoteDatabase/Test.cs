@@ -25,7 +25,7 @@ namespace SQLiteDemo
         {
             foreach (var kb in kbList)
             {
-                db.addKB(kb);
+                db.AddKnowledgeBase(kb);
                 Console.WriteLine($"Add kbase {kb.Name}\n");
             }
         }
@@ -90,7 +90,7 @@ namespace SQLiteDemo
         {
             foreach (var note in noteList)
             {
-                db.addNote(note);
+                db.AddNote(note);
                 Console.WriteLine($"Add note {note.Title}\n");
             }
         }
@@ -291,7 +291,7 @@ namespace SQLiteDemo
 
             // Non-exist KnowledgeBase
             var emptyKb = new KnowledgeBase() { Name = "Template" };
-            db.addKB(emptyKb);
+            db.AddKnowledgeBase(emptyKb);
             var shouldBeEmpty0 = db.FetchNote(emptyKb.Name);
             var shouldBeEmpty1 = db.FetchNote("Java");
             if (shouldBeEmpty0.Count == 0
@@ -427,7 +427,7 @@ namespace SQLiteDemo
                 }
 
                 // Restore
-                db.addKB(kb);
+                db.AddKnowledgeBase(kb);
             }
         }
 
@@ -458,7 +458,7 @@ namespace SQLiteDemo
                 }
 
                 // Restore
-                db.addNote(note);
+                db.AddNote(note);
             }
         }
         #endregion
